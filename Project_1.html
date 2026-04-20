@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Change</title>
+</head>
+<body>
+</body>
+<script>
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    const div = document.createElement('h1');
+    div.className = 'heading';
+    div.id = Math.floor(Math.random() * 10 + 1)
+    div.setAttribute('title' , 'new title')
+    div.style.color = random();
+    div.style.backgroundColor = `rgb( ${r}, ${g},${b})`
+    const name = document.createTextNode('Soumajit')
+    div.appendChild(name)
+    document.body.appendChild(div)
+
+
+    function random(){
+        let a= '#'
+        let b= '1234567890ABCDEF'
+        for (let i = 0; i <6; i++) {            
+        
+        a=a+b[Math.floor(Math.random()* 16)]
+        }
+        return a;
+    }
+
+    
+
+</script>
+</html>
